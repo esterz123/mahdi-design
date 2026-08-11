@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | MAHDI. Designer de marque</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav-logo" href="index.html">MAHDI<span class="dot">.</span></a>
+  <nav class="nav-links">
+    <a href="index.html#offres">Prestations</a>
+    <a href="index.html#travaux">Travaux</a>
+    <a href="index.html#methode">Méthode</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="diagnostic.html" class="nav-cta">Diagnostic 290 €</a>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="page-inner" style="max-width:620px;">
+    <a class="back" href="index.html">Retour à l'accueil</a>
+    <p class="label" style="color:var(--accent);">Contact</p>
+    <h1>Parlons de votre projet</h1>
+    <p>Laissez votre demande dans le formulaire, je vous réponds sous 24h en semaine. Le diagnostic est remboursable, le risque est pour moi.</p>
+
+    <p style="margin:26px 0 8px;color:var(--muted);font-size:0.9rem;">Ou écrivez-moi directement :</p>
+    <a class="contact-mail" href="mailto:contact@mahdi-design.com" style="margin-bottom:30px;display:inline-block;">contact@mahdi-design.com</a>
+
+    <form class="form" id="contact-form">
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <input type="text" name="societe" placeholder="Société">
+      <input type="email" name="email" placeholder="Votre email" required>
+      <select name="sujet" id="offre">
+        <option>Diagnostic express 290 €</option>
+        <option>Refonte de marque</option>
+        <option>Pack sécurité WordPress</option>
+        <option>Autre demande</option>
+      </select>
+      <textarea name="message" placeholder="Votre message" required></textarea>
+      <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+    </form>
+    <p style="margin-top:14px;font-size:0.82rem;color:var(--muted);">Si votre boîte mail ne s'ouvre pas au clic, écrivez simplement à contact@mahdi-design.com avec votre demande.</p>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 MAHDI. Designer de marque. <a href="mailto:contact@mahdi-design.com">contact@mahdi-design.com</a></p>
+</footer>
+
+<script>
+// pre-selection de l'offre si on arrive de la page d'une offre (ex: contact.html?offre=diagnostic)
+window.addEventListener('DOMContentLoaded', function () {
+  var o = new URLSearchParams(window.location.search).get('offre');
+  var map = { diagnostic: 'Diagnostic express 290 €', refonte: 'Refonte de marque', pack: 'Pack sécurité WordPress' };
+  if (o && map[o]) { document.getElementById('offre').value = map[o]; }
+});
+
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target;
+  var sujet = 'Demande depuis le site : ' + f.sujet.value;
+  var corps = 'Nom : ' + f.nom.value + '\nSociete : ' + f.societe.value + '\nEmail : ' + f.email.value + '\n\n' + f.message.value;
+  window.location.href = 'mailto:contact@mahdi-design.com?subject=' + encodeURIComponent(sujet) + '&body=' + encodeURIComponent(corps);
+});
+</script>
+
+</body>
+</html>
