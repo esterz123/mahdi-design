@@ -15,7 +15,7 @@
     <a href="index.html#travaux">Travaux</a>
     <a href="index.html#methode">Méthode</a>
     <a href="index.html#contact">Contact</a>
-    <a href="diagnostic.html" class="nav-cta">Diagnostic 290 €</a>
+    <a href="diagnostic.html" class="nav-cta">Diagnostic 79 €</a>
   </nav>
 </header>
 
@@ -34,7 +34,7 @@
       <input type="text" name="societe" placeholder="Société">
       <input type="email" name="email" placeholder="Votre email" required>
       <select name="sujet" id="offre">
-        <option>Diagnostic express 290 €</option>
+        <option>Diagnostic express 79 €</option>
         <option>Refonte de marque</option>
         <option>Pack sécurité WordPress</option>
         <option>Autre demande</option>
@@ -54,7 +54,7 @@
 // pre-selection de l'offre si on arrive de la page d'une offre (ex: contact.html?offre=diagnostic)
 window.addEventListener('DOMContentLoaded', function () {
   var o = new URLSearchParams(window.location.search).get('offre');
-  var map = { diagnostic: 'Diagnostic express 290 €', refonte: 'Refonte de marque', pack: 'Pack sécurité WordPress' };
+  var map = { diagnostic: 'Diagnostic express 79 €', refonte: 'Refonte de marque', pack: 'Pack sécurité WordPress' };
   if (o && map[o]) { document.getElementById('offre').value = map[o]; }
 });
 
