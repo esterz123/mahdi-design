@@ -54,7 +54,7 @@
 // pre-selection de l'offre si on arrive de la page d'une offre (ex: contact.html?offre=diagnostic)
 window.addEventListener('DOMContentLoaded', function () {
   var o = new URLSearchParams(window.location.search).get('offre');
-  var map = { diagnostic: 'Diagnostic express 79 €', refonte: 'Refonte de marque', pack: 'Pack sécurité WordPress' };
+  var map = { diagnostic: 'Diagnostic express 79 €', refonte: 'Refonte de marque', rentree: 'Refonte de marque', pack: 'Pack sécurité WordPress' };
   if (o && map[o]) { document.getElementById('offre').value = map[o]; }
 });
 
