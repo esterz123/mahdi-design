@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard Patterns Emails — Campagne B2B</title>
+<style>
+:root {
+  --bg: #0d0f13;
+  --bg-card: #171b22;
+  --line: #242a34;
+  --text: #e8eaef;
+  --muted: #9aa3b2;
+  --accent: #ff7a1a;
+  --ok: #4ade80;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Segoe UI", sans-serif; background: var(--bg); color: var(--text); padding: 30px; line-height: 1.6; }
+h1 { font-size: 2rem; margin-bottom: 8px; }
+h2 { font-size: 1.3rem; margin: 30px 0 12px; color: var(--accent); }
+.subtitle { color: var(--muted); margin-bottom: 30px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 30px; }
+.kpi { background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+.kpi-value { font-size: 2.5rem; font-weight: 800; color: var(--accent); }
+.kpi-label { color: var(--muted); font-size: 0.9rem; }
+table { width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: 12px; overflow: hidden; margin-bottom: 30px; }
+th { background: rgba(255,122,26,0.1); padding: 12px; text-align: left; color: var(--accent); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+td { padding: 10px 12px; border-bottom: 1px solid var(--line); font-size: 0.92rem; }
+.tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 0.78rem; }
+.tag-sec { background: rgba(100,150,255,0.15); color: #87b3ff; }
+.tag-acc { background: rgba(255,122,26,0.15); color: var(--accent); }
+.tag-off { background: rgba(74,222,128,0.15); color: var(--ok); }
+.reco { background: var(--bg-card); border: 2px solid var(--accent); border-radius: 12px; padding: 18px; margin: 14px 0; }
+.reco h3 { color: var(--accent); margin-bottom: 8px; }
+.reco p { font-size: 0.92rem; color: var(--muted); }
+.reco strong { color: var(--text); }
+</style>
+</head>
+<body>
+<h1>📊 Dashboard Patterns — Campagne B2B</h1>
+<p class="subtitle">Analyse générée le 17/08/2026 à 18h48 · 88 emails analysés</p>
+
+<div class="grid">
+    <div class="kpi"><div class="kpi-value">88</div><div class="kpi-label">Emails en campagne</div></div>
+    <div class="kpi"><div class="kpi-value">65</div><div class="kpi-label">Prêts à envoyer (to_confirmed)</div></div>
+    <div class="kpi"><div class="kpi-value">7</div><div class="kpi-label">Secteurs distincts</div></div>
+    <div class="kpi"><div class="kpi-value">9</div><div class="kpi-label">Types d'accroches</div></div>
+</div>
+
+<h2>🏆 Recommandations : accroches à dupliquer</h2>
+<p style="color: var(--muted); margin-bottom: 14px;">Les 3 patterns les plus fréquents et déjà confirmés. Réutilise cette structure pour les prochains prospects :</p>
+
+        <div class="reco">
+            <h3>🎯 Accroche : Design daté</h3>
+            <p><strong>Objet :</strong> 5 polices différentes sur une même page , et ce que ça dit de vos moules</p>
+            <p><strong>Exemple :</strong> 3 — Rouxel Mold (moules industriels)</p>
+        </div>
+        
+        <div class="reco">
+            <h3>🎯 Accroche : CMS daté</h3>
+            <p><strong>Objet :</strong> WordPress 2018 sur votre site , un détail qui coûte cher</p>
+            <p><strong>Exemple :</strong> 2 — Slicom (ACA Slicom Technologies, Clermont-Ferrand)</p>
+        </div>
+        
+        <div class="reco">
+            <h3>🎯 Accroche : Pas de preuves</h3>
+            <p><strong>Objet :</strong> Votre site affiche sa propre ancienneté</p>
+            <p><strong>Exemple :</strong> 1 — SIMI (Sté Industrielle de Micro-Injection)</p>
+        </div>
+        
+
+<h2>📋 Top accroches (tous prospects)</h2>
+<table><tr><th>Accroche</th><th>Count</th><th>%</th></tr><tr><td>Design daté</td><td>50</td><td>56.8%</td></tr><tr><td>CMS daté</td><td>14</td><td>15.9%</td></tr><tr><td>Pas de preuves</td><td>8</td><td>9.1%</td></tr><tr><td>Code obsolète</td><td>7</td><td>8.0%</td></tr><tr><td>SEO absent</td><td>4</td><td>4.5%</td></tr><tr><td>Erreurs techniques</td><td>2</td><td>2.3%</td></tr><tr><td>Template non nettoyé</td><td>1</td><td>1.1%</td></tr><tr><td>Pas mobile</td><td>1</td><td>1.1%</td></tr><tr><td>Plateforme limitée</td><td>1</td><td>1.1%</td></tr></table>
+
+<h2>📋 Top secteurs</h2>
+<table><tr><th>Secteur</th><th>Count</th><th>%</th></tr><tr><td>inconnu</td><td>45</td><td>51.1%</td></tr><tr><td>mécanique/usinage</td><td>22</td><td>25.0%</td></tr><tr><td>injection plastique</td><td>13</td><td>14.8%</td></tr><tr><td>électricité</td><td>3</td><td>3.4%</td></tr><tr><td>métallerie</td><td>3</td><td>3.4%</td></tr><tr><td>agence/communication</td><td>1</td><td>1.1%</td></tr><tr><td>imprimerie</td><td>1</td><td>1.1%</td></tr></table>
+
+<h2>📋 Offres proposées</h2>
+<table><tr><th>Offre</th><th>Count</th><th>%</th></tr><tr><td>autre</td><td>68</td><td>77.3%</td></tr><tr><td>diag gratuit</td><td>19</td><td>21.6%</td></tr><tr><td>diag 79€</td><td>1</td><td>1.1%</td></tr></table>
+
+<h2>📋 Longueur des emails</h2>
+<table><tr><th>Longueur</th><th>Count</th><th>%</th></tr><tr><td>court</td><td>84</td><td>95.5%</td></tr><tr><td>moyen</td><td>4</td><td>4.5%</td></tr></table>
+
+<h2>📋 Aperçu des 30 premiers prospects</h2>
+<table>
+<tr><th>État</th><th>Prospect</th><th>Secteur</th><th>Accroche</th><th>Offre</th><th>Volume</th></tr>
+
+        <tr>
+            <td>✅</td>
+            <td>1 — SIMI (Sté Industrielle de Micro-Injection)</td>
+            <td><span class="tag tag-sec">injection plastique</span></td>
+            <td><span class="tag tag-acc">Pas de preuves</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>256 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>2 — Slicom (ACA Slicom Technologies, Clermont-Ferr</td>
+            <td><span class="tag tag-sec">mécanique/usinage</span></td>
+            <td><span class="tag tag-acc">CMS daté</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>209 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>3 — Rouxel Mold (moules industriels)</td>
+            <td><span class="tag tag-sec">injection plastique</span></td>
+            <td><span class="tag tag-acc">Design daté</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>171 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>4 — Milmeca (Villeneuve-Tolosane, 31)</td>
+            <td><span class="tag tag-sec">mécanique/usinage</span></td>
+            <td><span class="tag tag-acc">Code obsolète</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>200 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>5 — Georget Precision (Vivonne, 86)</td>
+            <td><span class="tag tag-sec">mécanique/usinage</span></td>
+            <td><span class="tag tag-acc">Design daté</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>171 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>6 — Brugière (EURL outillage, Peschadoires, 63)</td>
+            <td><span class="tag tag-sec">injection plastique</span></td>
+            <td><span class="tag tag-acc">Code obsolète</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>170 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>7 — ATP Applications Techniques des Plastiques (La</td>
+            <td><span class="tag tag-sec">injection plastique</span></td>
+            <td><span class="tag tag-acc">Design daté</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>161 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>8 — JSM Perrin (Châlette-sur-Loing, 45)</td>
+            <td><span class="tag tag-sec">inconnu</span></td>
+            <td><span class="tag tag-acc">Template non nettoyé</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>142 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>9 — Usimeca Prod (Sorbiers, 42)</td>
+            <td><span class="tag tag-sec">mécanique/usinage</span></td>
+            <td><span class="tag tag-acc">Design daté</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>166 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>10 — Remiplast (Saint-Aubin-lès-Elbeuf, 76)</td>
+            <td><span class="tag tag-sec">agence/communication</span></td>
+            <td><span class="tag tag-acc">Design daté</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>160 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>11 — ITPLAST (Sarreguemines, 57)</td>
+            <td><span class="tag tag-sec">injection plastique</span></td>
+            <td><span class="tag tag-acc">Design daté</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>113 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>12 — BG Plastic (Rhône, 69)</td>
+            <td><span class="tag tag-sec">injection plastique</span></td>
+            <td><span class="tag tag-acc">SEO absent</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>213 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>13 — Desjardins SA (76)</td>
+            <td><span class="tag tag-sec">injection plastique</span></td>
+            <td><span class="tag tag-acc">SEO absent</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>146 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>14 — Groupe RGF (Smart Plastic)</td>
+            <td><span class="tag tag-sec">injection plastique</span></td>
+            <td><span class="tag tag-acc">CMS daté</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>180 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>16 — R2C (moules et injection, AURA)</td>
+            <td><span class="tag tag-sec">injection plastique</span></td>
+            <td><span class="tag tag-acc">Design daté</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>141 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>18 — Erce Plasturgie (Oyonnax, 01)</td>
+            <td><span class="tag tag-sec">injection plastique</span></td>
+            <td><span class="tag tag-acc">Design daté</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>195 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>19 — JCM Decolletage (Sallanches, 74)</td>
+            <td><span class="tag tag-sec">mécanique/usinage</span></td>
+            <td><span class="tag tag-acc">Code obsolète</span></td>
+            <td><span class="tag tag-off">autre</span></td>
+            <td>129 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>20 — Fonderie Lemer (Carquefou, 44)</td>
+            <td><span class="tag tag-sec">inconnu</span></td>
+            <td><span class="tag tag-acc">Code obsolète</span></td>
+            <td><span class="tag tag-off">autre</span></td>
+            <td>149 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>21 — Provence Outillage (Les Taillades, 84)</td>
+            <td><span class="tag tag-sec">inconnu</span></td>
+            <td><span class="tag tag-acc">Design daté</span></td>
+            <td><span class="tag tag-off">autre</span></td>
+            <td>124 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>22 — Usinage Alsace (Oberhaslach, 67)</td>
+            <td><span class="tag tag-sec">mécanique/usinage</span></td>
+            <td><span class="tag tag-acc">SEO absent</span></td>
+            <td><span class="tag tag-off">autre</span></td>
+            <td>93 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>23 — Maine Tolerie (Chateau-Gontier, 53)</td>
+            <td><span class="tag tag-sec">inconnu</span></td>
+            <td><span class="tag tag-acc">Pas de preuves</span></td>
+            <td><span class="tag tag-off">autre</span></td>
+            <td>109 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>24 — AG Tolerie (Saint-Martin-la-Plaine, 42)</td>
+            <td><span class="tag tag-sec">inconnu</span></td>
+            <td><span class="tag tag-acc">Pas de preuves</span></td>
+            <td><span class="tag tag-off">autre</span></td>
+            <td>127 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>25 — France Injection Service (Saint-Symphorien-d'</td>
+            <td><span class="tag tag-sec">injection plastique</span></td>
+            <td><span class="tag tag-acc">Design daté</span></td>
+            <td><span class="tag tag-off">autre</span></td>
+            <td>125 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>26 — Usinage Dieppois (Rouxmesnil-Bouteilles, 76)</td>
+            <td><span class="tag tag-sec">mécanique/usinage</span></td>
+            <td><span class="tag tag-acc">Code obsolète</span></td>
+            <td><span class="tag tag-off">autre</span></td>
+            <td>116 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>27 — Drault Decolletage (Ayse, 74)</td>
+            <td><span class="tag tag-sec">mécanique/usinage</span></td>
+            <td><span class="tag tag-acc">Pas de preuves</span></td>
+            <td><span class="tag tag-off">autre</span></td>
+            <td>86 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>28 — Le Decolletage Jurassien (Champagnole, 39)</td>
+            <td><span class="tag tag-sec">mécanique/usinage</span></td>
+            <td><span class="tag tag-acc">Pas de preuves</span></td>
+            <td><span class="tag tag-off">autre</span></td>
+            <td>142 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>29 — Gay Decolletage (Saint-Pierre-en-Faucigny, 74</td>
+            <td><span class="tag tag-sec">mécanique/usinage</span></td>
+            <td><span class="tag tag-acc">Pas de preuves</span></td>
+            <td><span class="tag tag-off">autre</span></td>
+            <td>114 mots</td>
+        </tr>
+        
+        <tr>
+            <td>✅</td>
+            <td>30 — Decolletage Morel (Champagnole, 39)</td>
+            <td><span class="tag tag-sec">mécanique/usinage</span></td>
+            <td><span class="tag tag-acc">Pas de preuves</span></td>
+            <td><span class="tag tag-off">autre</span></td>
+            <td>134 mots</td>
+        </tr>
+        
+        <tr>
+            <td>⏳</td>
+            <td>33 — Alpha Matieres Plastiques</td>
+            <td><span class="tag tag-sec">électricité</span></td>
+            <td><span class="tag tag-acc">CMS daté</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>124 mots</td>
+        </tr>
+        
+        <tr>
+            <td>⏳</td>
+            <td>34 — Artois Plastiques</td>
+            <td><span class="tag tag-sec">inconnu</span></td>
+            <td><span class="tag tag-acc">CMS daté</span></td>
+            <td><span class="tag tag-off">diag gratuit</span></td>
+            <td>109 mots</td>
+        </tr>
+        
+</table>
+
+</body>
+</html>
