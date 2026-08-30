@@ -60,14 +60,16 @@ async function lancer(){
  var proxys=[
   function(x){return 'https://api.allorigins.win/raw?url='+encodeURIComponent(x);},
   function(x){return 'https://api.codetabs.com/v1/proxy?quest='+encodeURIComponent(x);},
-  function(x){return x;}
+  function(x){return 'https://api.allorigins.win/get?url='+encodeURIComponent(x);}
  ];
  for(var pi=0;pi<proxys.length;pi++){
   try{
    var ctrl=new AbortController();var to=setTimeout(function(){ctrl.abort();},14000);
    var r=await fetch(proxys[pi](u),{signal:ctrl.signal});
    clearTimeout(to);
-   if(r.ok){var txt=await r.text();if(txt&&txt.length>200){html=txt;break;}}
+   if(r.ok){var txt=await r.text();
+    if(pi===2){try{txt=JSON.parse(txt).contents||'';}catch(e){}}
+    if(txt&&txt.length>200){html=txt;break;}}
   }catch(e){err=String(e);}
  }
  var t1=Date.now();
