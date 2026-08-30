@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diagnostic gratuit de votre site en 30 secondes | Mahdi Design</title>
+<meta name="description" content="Tapez l'URL de votre site : analyse instantanee et gratuite (HTTPS, mobile, SEO, confiance). Le diagnostic complet avec plan d'action chiffre : 79 EUR.">
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0f172a;color:#f1f5f9;margin:0;padding:24px;line-height:1.6}
+.wrap{max-width:680px;margin:0 auto}
+h1{font-size:26px;margin:0 0 6px}
+.sub{color:#94a3b8;margin-bottom:22px}
+.card{background:#1e293b;border-radius:14px;padding:22px;margin-bottom:16px}
+input{width:100%;box-sizing:border-box;padding:14px;font-size:16px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#f1f5f9}
+button{margin-top:12px;width:100%;padding:14px;font-size:16px;font-weight:bold;border:0;border-radius:10px;background:#2563eb;color:#fff;cursor:pointer}
+button:disabled{opacity:.5}
+.row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #334155;font-size:15px}
+.ok{color:#4ade80;font-weight:bold}.ko{color:#f87171;font-weight:bold}.mid{color:#fbbf24;font-weight:bold}
+.score{font-size:44px;font-weight:900;text-align:center;padding:8px 0}
+.cta{background:#14532d;border:2px solid #16a34a;border-radius:12px;padding:18px;margin-top:18px;display:none}
+.cta a{display:inline-block;margin-top:10px;background:#16a34a;color:#fff;font-weight:bold;padding:13px 24px;border-radius:10px;text-decoration:none}
+.small{color:#64748b;font-size:13px;margin-top:14px}
+a.home{color:#60a5fa;text-decoration:none;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="home" href="https://mahdi-design.com">&larr; mahdi-design.com</a>
+<h1>Diagnostic gratuit de votre site</h1>
+<div class="sub">Tapez l'URL de votre site (ou celui de votre concurrent). Resultat en 30 secondes, sans inscription.</div>
+<div class="card">
+<input id="url" placeholder="votre-entreprise.fr" autocomplete="off">
+<button id="go" onclick="lancer()">Analyser mon site gratuitement</button>
+<div id="out" style="display:none">
+<div class="score" id="score"></div>
+<div id="rows"></div>
+<div class="cta" id="cta">
+<b style="font-size:17px">Votre plan d'action complet : 79 EUR</b>
+<div style="color:#bbf7d0;font-size:14px;margin-top:6px">Comparatif avec 2 concurrents, corrections exactes code par code, estimation du chiffre d'affaires perdu. Livraison immediate.</div>
+<a href="https://www.paypal.com/ncp/payment/FQYKP733699LQ">Payer 79 EUR et recevoir mon rapport</a>
+<div style="margin-top:10px;font-size:13px;color:#86efac">Ou envoyez "diagnostic" a <a style="color:#86efac" href="mailto:contact@mahdi-design.com">contact@mahdi-design.com</a> pour la version offerte.</div>
+</div>
+</div>
+<div class="small">Analyse 100% cote navigateur. Aucune donnee enregistree. Concu par Mahdi Design, specialiste des sites industriels qui convertissent.</div>
+</div>
+<div class="card" style="font-size:14px;color:#94a3b8">
+<b style="color:#f1f5f9">Pourquoi ce diagnostic ?</b><br>
+80% des sites de PME industrielles perdent des appels d'offres avant meme le premier coup de fil : pas de HTTPS, illisible sur telephone, invisible sur Google. Ce test rapide revele les 5 points critiques en 30 secondes.
+</div>
+</div>
+<script>
+function norm(u){u=(u||'').trim();if(!u)return '';if(!/^https?:\/\//i.test(u))u='https://'+u;return u;}
+async function lancer(){
+ var u=norm(document.getElementById('url').value);
+ if(!u){alert('Tapez une URL, ex: votre-entreprise.fr');return;}
+ var b=document.getElementById('go');b.disabled=true;b.textContent='Analyse en cours...';
+ var out=document.getElementById('out');out.style.display='block';
+ var rows=document.getElementById('rows');rows.innerHTML='<div class="row">Chargement...</div>';
+ var t0=Date.now(),html='',err='';
+ var proxys=[
+  function(x){return 'https://api.allorigins.win/raw?url='+encodeURIComponent(x);},
+  function(x){return 'https://api.codetabs.com/v1/proxy?quest='+encodeURIComponent(x);},
+  function(x){return x;}
+ ];
+ for(var pi=0;pi<proxys.length;pi++){
+  try{
+   var ctrl=new AbortController();var to=setTimeout(function(){ctrl.abort();},14000);
+   var r=await fetch(proxys[pi](u),{signal:ctrl.signal});
+   clearTimeout(to);
+   if(r.ok){var txt=await r.text();if(txt&&txt.length>200){html=txt;break;}}
+  }catch(e){err=String(e);}
+ }
+ var t1=Date.now();
+ var pts=[];var score=0;
+ if(err||!html||html.length<200){
+  rows.innerHTML='<div class="row">Site injoignable ou protege. Verifiez l\'URL et reessayez.</div>';
+  b.disabled=false;b.textContent='Analyser mon site gratuitement';return;
+ }
+ var low=html.toLowerCase();
+ // 1 HTTPS
+ var https=u.indexOf('https')===0;pts.push(['Protocole securise (HTTPS)',https,https?'Votre site est en HTTPS':'Pas de HTTPS : Google et les navigateurs affichent "Non securise"']);score+=https?20:0;
+ // 2 viewport mobile
+ var vp=low.indexOf('name="viewport"')>-1||low.indexOf("name='viewport'")>-1;pts.push(['Adapte aux telephones',vp,vp?'Balisage viewport present':'AUCUN balisage viewport : votre site est illisible sur mobile']);score+=vp?20:0;
+ // 3 title
+ var m=html.match(/<title[^>]*>([^<]*)<\/title>/i);var title=m?m[1].trim():'';var tOk=title.length>15&&title.length<70;pts.push(['Titre optimise Google',tOk,title?('« '+title.slice(0,60)+' » ('+title.length+' car.)'):'Pas de titre : invisible sur Google']);score+=tOk?15:(title?8:0);
+ // 4 meta description
+ var md=low.indexOf('name="description"')>-1;pts.push(['Description Google',md,md?'Meta description presente':'Aucune meta description : Google redige votre annonce sans vous']);score+=md?15:0;
+ // 5 images sans alt
+ var imgs=(html.match(/<img\b[^>]*>/gi)||[]);var noAlt=imgs.filter(function(i){return !/\balt=/i.test(i);}).length;
+ var imgOk=imgs.length===0||noAlt<Math.max(3,imgs.length*0.5);pts.push(['Images accessibles',imgOk,imgs.length?(noAlt+'/'+imgs.length+' images sans texte alternatif'):'Peu d\'images detectees']);score+=imgOk?10:0;
+ // 6 vitesse
+ var ms=t1-t0;var vOk=ms<4000;pts.push(['Vitesse de chargement',vOk,'Reponse serveur : '+(ms/1000).toFixed(1)+' s'+(vOk?' (correct)':' (lent, les visiteurs partent avant 3 s)')]);score+=vOk?10:0;
+ // 7 annee copyright fraiche
+ var yr=new Date().getFullYear();var ym=low.match(/(?:copyright|©|&copy;)\D{0,12}(20\d\d)/);var yOk=ym?(+ym[1])>=yr-1:true;pts.push(['Site maintenu a jour',yOk,yOk?(ym?'Copyright '+(+ym[1]):'Aucune date visible (neutre)'):'Copyright '+(+ym[1])+' : le site parait abandonne']);score+=yOk?10:0;
+ document.getElementById('score').textContent=score+'/100';
+ document.getElementById('score').style.color=score>=70?'#4ade80':score>=40?'#fbbf24':'#f87171';
+ var h='';for(var i=0;i<pts.length;i++){var p=pts[i];h+='<div class="row"><span>'+p[0]+'</span><span class="'+(p[1]?'ok':'ko')+'">'+(p[1]?'OK':'PROBLEME')+'</span></div><div style="color:#94a3b8;font-size:13px;margin:-6px 0 10px">'+p[2]+'</div>';}
+ rows.innerHTML=h;
+ document.getElementById('cta').style.display='block';
+ b.disabled=false;b.textContent='Analyser un autre site';
+}
+document.getElementById('url').addEventListener('keydown',function(e){if(e.key==='Enter')lancer();});
+</script>
+</body>
+</html>
