@@ -36,7 +36,7 @@
       <select name="sujet" id="offre">
         <option>Diagnostic express 79 €</option>
         <option>Refonte de marque</option>
-        <option>Pack sécurité WordPress</option>
+        <option>Pack Sérénité</option>
         <option>Autre demande</option>
       </select>
       <textarea name="message" placeholder="Votre message" required></textarea>
@@ -54,7 +54,7 @@
 // pre-selection de l'offre si on arrive de la page d'une offre (ex: contact.html?offre=diagnostic)
 window.addEventListener('DOMContentLoaded', function () {
   var o = new URLSearchParams(window.location.search).get('offre');
-  var map = { diagnostic: 'Diagnostic express 79 €', refonte: 'Refonte de marque', rentree: 'Refonte de marque', pack: 'Pack sécurité WordPress', partenaire: 'Autre demande' };
+  var map = { diagnostic: 'Diagnostic express 79 €', refonte: 'Refonte de marque', rentree: 'Refonte de marque', pack: 'Pack Sérénité', partenaire: 'Autre demande' };
   if (o && map[o]) { document.getElementById('offre').value = map[o]; }
 });
 
