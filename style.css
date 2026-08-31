@@ -96,7 +96,7 @@ em { color: var(--accent); font-style: normal; }
 
 .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 22px; }
 
-.hero-proof { font-size: 0.85rem; color: var(--ok); }
+.hero-proof { font-size: 0.95rem; color: #4ade80; font-weight: 600; }
 
 /* ============ BOUTONS ============ */
 .btn {
