@@ -3,32 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
 <title>Audit gratuit de votre site en 30 secondes - Mahdi Design</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap">
+<link rel="stylesheet" href="assets/atoms.css?v=5">
 <style>
-body{font-family:var(--font,'Segoe UI'),sans-serif;background:#0d0f13;color:#e8eaef;margin:0;padding:0;display:flex;align-items:center;justify-content:center;min-height:100vh}
-.card{background:#171b22;border:1px solid #242a34;border-radius:16px;padding:44px 36px;max-width:480px;margin:24px;text-align:center}
-h1{font-size:1.7rem;margin-bottom:10px}em{color:#ff7a1a;font-style:normal}
-p{color:#9aa3b2;font-size:0.95rem;margin-bottom:24px}
-input{width:100%;padding:15px 18px;border-radius:999px;border:1px solid #242a34;background:#0d0f13;color:#e8eaef;font-size:1rem;margin-bottom:16px}
-button{width:100%;padding:15px;border-radius:999px;border:0;background:linear-gradient(135deg,#ff8c2a,#ff7a1a);color:#0d0f13;font-weight:800;font-size:1rem;cursor:pointer}
-button:hover{transform:scale(1.02);box-shadow:0 10px 32px rgba(255,122,26,.45)}
-.small{font-size:.8rem;color:#4ade80;margin-top:14px}
-a{color:#9aa3b2}
+body{display:flex;align-items:center;justify-content:center;min-height:100vh}
+.solo{border:1px solid var(--line);border-radius:var(--radius-cards);padding:48px 40px;max-width:500px;margin:24px;text-align:center}
+.solo h1{font-size:30px;margin-bottom:12px}
+.solo p{color:var(--ink-dim);font-size:14px;margin-bottom:22px}
+.solo .tiny{font-size:12px;color:var(--ink-faint);margin-top:14px}
 </style>
 </head>
 <body>
-<div class="card">
-<h1>Audit gratuit de votre site <em>en 30 secondes</em></h1>
-<p>Vous decouvrez ce qui fait fuir vos clients : vitesse, mobile, securite, visibilite Google. Rapport chiffre, sans engagement, livre par email.</p>
+<div class="solo">
+<div class="mosaic" aria-hidden="true" style="margin-bottom:28px"></div>
+<h1>Votre site, <span class="gold">scanné en 30 secondes.</span></h1>
+<p>Vitesse, mobile, sécurité, visibilité Google. Rapport chiffré, sans engagement, livré par email.</p>
 <form name="audit-gratuit" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci-audit.html">
   <input type="hidden" name="form-name" value="audit-gratuit" />
   <p style="display:none"><label>Ne pas remplir: <input name="bot-field"/></label></p>
-  <input type="url" name="site" placeholder="https://votre-site.fr" required />
-  <input type="email" name="email" placeholder="votre@email.fr" required />
-  <button type="submit">Recevoir mon audit gratuit &rarr;</button>
+  <div style="margin-bottom:14px"><input class="in" type="url" name="site" placeholder="https://votre-site.fr" required /></div>
+  <div style="margin-bottom:16px"><input class="in" type="email" name="email" placeholder="votre@email.fr" required /></div>
+  <button class="btn btn-cream" style="width:100%" type="submit">Recevoir mon audit gratuit →</button>
 </form>
-<p class="small">Aucune inscription. Vous voyez vous-meme avant de me croire.</p>
-<p style="margin-top:18px;font-size:.85rem"><a href="https://mahdi-design.com">&larr; Retour au portfolio</a></p>
+<p class="tiny">Aucune inscription. Vous voyez vous-même avant de me croire.</p>
+<p class="mt" style="font-size:13px"><a class="ghost" href="https://mahdi-design.com">← Retour au portfolio</a></p>
 </div>
+<script src="assets/site.js?v=5"></script>
 </body>
 </html>

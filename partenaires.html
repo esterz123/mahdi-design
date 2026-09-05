@@ -3,94 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Devenir partenaire agence | MAHDI. Studio de marque</title>
-<meta name="description" content="Partenariat agences web : vos clients industriels ont un site qui date. Je le refonds et le rebrand, vous gardez la relation et touchez 15% de commission sur chaque projet signé.">
-<link rel="stylesheet" href="style.css">
+<meta name="robots" content="noindex">
+<title>Devenir partenaire agence | MAHDI. Design</title>
+<meta name="description" content="Agences : confiez vos refontes de marque a un specialiste. 15% de commission, acompte 30%, reponse en 24h.">
+<meta property="og:title" content="Partenaires agences | MAHDI.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap">
+<link rel="stylesheet" href="assets/atoms.css?v=5">
 </head>
 <body>
 
-<div class="filer"></div>
+<nav class="top">
+  <div class="nav-in">
+    <a class="brand" href="index.html">MAHDI<em>.</em><small>DESIGN</small></a>
+    <div class="nav-links">
+      <a href="index.html#offres">Offres</a>
+      <a href="index.html#travaux">Travaux</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a class="btn btn-cream btn-sm nav-cta" href="diagnostic.html">Diagnostic 79&nbsp;€</a>
+  </div>
+</nav>
 
-<header class="nav">
-  <a class="nav-logo" href="index.html">MAHDI<sup>.</sup></a>
-  <nav class="nav-links">
-    <a href="index.html#offres">Offres</a>
-    <a href="index.html#travaux">Travaux</a>
-    <a href="index.html#avis">Avis</a>
-    <a href="partenaires.html">Partenaires</a>
-    <a href="index.html#contact">Contact</a>
-    <a class="nav-cta" href="diagnostic.html">Diagnostic 79 €</a>
-  </nav>
+<header class="hero left">
+  <div class="wrap narrow">
+    <p><span class="pill">Agences</span></p>
+    <h1 class="mt">Vos clients méritent <span class="ch">mieux qu'un template.</span></h1>
+    <p class="sub">Vous vendez le projet, je dessine la marque. 15% de commission pour vous, zéro gestion en plus.</p>
+    <div class="hero-cta">
+      <a class="btn btn-cream" href="contact.html?offre=partenaire">Devenir partenaire</a>
+    </div>
+  </div>
 </header>
 
-<main class="page">
-  <div class="page-inner">
-    <a class="back" href="index.html">Retour à l'accueil</a>
-    <p class="label" style="color:var(--accent);">Partenariat agences</p>
-    <h1>Vos clients industriels ont un site d'époque. Je le refonds, vous encaissez 15%.</h1>
-    <p class="prix-hero" style="font-size:1.4rem;">Commission de 15% <span style="font-size:1.1rem;color:var(--muted);">sur chaque projet que vous me envoyez et qui signe</span></p>
-
-    <p>Vous êtes agence web, studio, freelance, ou cabinet d'expertise comptable : vos clients industriels (plasturgie, usinage, décolletage, fonderie, tôlerie, mécanique) ont souvent un site et une identité qui datent de 10 ans. Ce n'est pas votre cœur de métier de reconstruire leur marque, et vous n'avez pas le temps.</p>
-    <p>C'est le mien. Vous me les envoyez, je ferme le projet, et vous touchez 15% sans jamais lever le petit doigt.</p>
-
-    <h2>Combien vous rapporte un partenaire</h2>
-    <div class="calc">
-      <label for="montant">Montant du projet que je signe avec votre client (€)</label>
-      <input type="number" id="montant" value="4900" min="0" step="100">
-      <div class="calc-result">Votre commission (15%) : <strong id="comm">735 €</strong></div>
-      <p class="calc-note">Exemples réels de mes offres : La Marque qui Vend 3 900-5 900 €, Offre Rentrée 2 900 €, Pack Sérénité 690 €/an (commission récurrente chaque année). Un client par mois à 4 900 € = 735 € pour vous, sans coût ni risque.</p>
+<section>
+  <div class="wrap narrow">
+    <div class="sec-head rv"><span class="sec-num">01</span><h2>Comment ça marche</h2></div>
+    <div class="steps rv">
+      <div class="step"><p class="n">01</p><h3>Vous apportez le client</h3><p>Un email suffit. Je chiffre sous 24h, vous ajoutez votre marge.</p></div>
+      <div class="step"><p class="n">02</p><h3>Je produis en marque blanche</h3><p>Identité + site, livrés à vous. Votre client ne me voit jamais si vous préférez.</p></div>
+      <div class="step"><p class="n">03</p><h3>Vous touchez 15%</h3><p>Commission sur chaque projet apporté, versée à la livraison. Acompte client de 30% pour démarrer.</p></div>
     </div>
 
-    <h2>Comment on travaille ensemble</h2>
-    <ul>
-      <li><strong>Vous repérez</strong> un client dont le site ou l'identité ne reflètent plus son entreprise.</li>
-      <li><strong>Je m'occupe de tout</strong> : diagnostic, devis, design, refonte complète de la marque et du site, livraison, suivi.</li>
-      <li><strong>Vous gardez la relation client</strong>, et vous touchez <strong>15% de commission</strong> sur chaque projet signé, payée dès la facture réglée.</li>
-    </ul>
+    <div class="calc rv">
+      <p class="cap">Simulation</p>
+      <h3>Votre commission par projet</h3>
+      <p>Montant du projet signé.</p>
+      <input type="range" id="montant" min="1000" max="10000" value="3900" step="100">
+      <div class="row"><span>1 000 €</span><span id="m-nb">3 900 €</span><span>10 000 €</span></div>
+      <p class="out"><span id="m-com">585</span>&nbsp;€ <span class="ch">pour vous</span></p>
+      <p>15% de commission. Acompte de <span id="m-ac">1 170</span> € (30%) pour démarrer.</p>
+    </div>
 
-    <h2>Pourquoi les agences disent oui</h2>
-    <ul>
-      <li><strong>Zéro risque pour votre réputation.</strong> Votre client reçoit d'abord un diagnostic offert : l'état de son site point par point, la comparaison avec 2 concurrents, et 5 actions concrètes. S'il ne voit pas la valeur, rien ne se passe.</li>
-      <li><strong>Vous offrez un service de plus</strong> à vos clients, sans y passer une heure.</li>
-      <li><strong>White label possible.</strong> Le livrable peut partir sous votre nom si vous le souhaitez.</li>
-      <li><strong>Commissions récurrentes.</strong> Le Pack Sérénité 690 €/an vous rapporte 15% chaque année tant que le client reste.</li>
-    </ul>
-
-    <h2>Ce que je livre</h2>
-    <ul>
-      <li>Audit et stratégie de marque</li>
-      <li>Logo et identité visuelle complète</li>
-      <li>Site web refondu, pensé pour convertir</li>
-      <li>Accompagnement jusqu'à la mise en ligne</li>
-    </ul>
-
-    <h2>Questions fréquentes</h2>
-    <ul>
-      <li>Est-ce que je contacte directement le client ? Oui, mais vous restez informé à chaque étape. C'est votre client, je le traite comme tel.</li>
-      <li>Et si le client veut faire affaire sans vous ? Impossible : c'est vous qui l'avez envoyé, la commission vous revient dès la signature.</li>
-      <li>Combien de temps ça prend ? Diagnostic offert sous 48h, projet complet en 2 à 4 semaines selon l'ampleur.</li>
-      <li>Y a-t-il un engagement ? Aucun. Vous m'envoyez un client quand vous le voulez.</li>
-    </ul>
-
-    <p style="margin-top:30px;"><a class="btn" href="contact.html?offre=partenaire">Devenir partenaire</a>
-    <a class="btn" style="background:transparent;border:1px solid var(--accent);color:var(--accent);margin-left:10px;" href="exemple-diagnostic.html">Voir un exemple de diagnostic</a></p>
-    <p style="margin-top:12px;"><a class="contact-mail" href="mailto:contact@mahdi-design.com">contact@mahdi-design.com</a></p>
+    <div class="sec-head rv"><span class="sec-num">02</span><h2>Questions</h2></div>
+    <div class="rv">
+      <details><summary>La marque blanche, c'est vraiment invisible ?</summary><p>Oui. Les fichiers sont livrés sans signature, les échanges se font via vous. Votre client ne sait pas que j'existe, sauf si vous voulez le contraire.</p></details>
+      <details><summary>Quels délais pour mes clients ?</summary><p>Identité seule : 2 semaines. Marque + site : 3 à 6 semaines. Je confirme le délai par écrit avant chaque projet.</p></details>
+      <details><summary>Et si mon client ne paie pas ?</summary><p>L'acompte de 30% est encaissé avant de démarrer. Le solde est dû à la livraison des fichiers. Pas de fichier sans solde.</p></details>
+    </div>
+    <div class="hero-cta mt rv" style="justify-content:flex-start">
+      <a class="btn btn-cream" href="contact.html?offre=partenaire">Devenir partenaire</a>
+    </div>
   </div>
-</main>
+</section>
 
+<footer class="site">
+  <div class="wrap foot">
+    <span>© <span data-year>2026</span> Mahdi, brand designer.</span>
+    <span class="sp"></span>
+    <a href="mailto:contact@mahdi-design.com">contact@mahdi-design.com</a>
+    <a href="https://mahdi-design.com">Portfolio : mahdi-design.com</a>
+  </div>
+<div class="footmark" aria-hidden="true">MAHDI<span class="ch">.</span></div></footer>
+
+<script src="assets/site.js?v=5"></script>
 <script>
-function calc() {
-  var m = parseFloat(document.getElementById('montant').value) || 0;
-  document.getElementById('comm').textContent = Math.round(m * 0.15).toLocaleString('fr-FR') + ' €';
-}
-document.getElementById('montant').addEventListener('input', calc);
-calc();
-
-window.addEventListener('DOMContentLoaded', function () {
-  var o = new URLSearchParams(window.location.search).get('offre');
-  if (o === 'partenaire') { document.title = 'Devenir partenaire | MAHDI. Studio de marque'; }
-});
+(function(){
+  var r = document.getElementById('montant');
+  if (!r) return;
+  function fmt(n){ return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
+  function upd(){
+    var v = +r.value;
+    document.getElementById('m-nb').textContent = fmt(v) + ' €';
+    document.getElementById('m-com').textContent = fmt(Math.round(v * 0.15));
+    document.getElementById('m-ac').textContent = fmt(Math.round(v * 0.30));
+  }
+  r.addEventListener('input', upd); upd();
+})();
 </script>
-
 </body>
 </html>

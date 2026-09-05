@@ -3,69 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
 <title>Contact | MAHDI. Designer de marque</title>
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Contactez Mahdi : reponse en moins de 24h, 100% par message.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap">
+<link rel="stylesheet" href="assets/atoms.css?v=5">
 </head>
 <body>
 
-<header class="nav">
-  <a class="nav-logo" href="index.html">MAHDI<span class="dot">.</span></a>
-  <nav class="nav-links">
-    <a href="index.html#offres">Prestations</a>
-    <a href="index.html#travaux">Travaux</a>
-    <a href="index.html#methode">Méthode</a>
-    <a href="index.html#contact">Contact</a>
-    <a href="diagnostic.html" class="nav-cta">Diagnostic 79 €</a>
-  </nav>
+<nav class="top">
+  <div class="nav-in">
+    <a class="brand" href="index.html">MAHDI<em>.</em><small>DESIGN</small></a>
+    <div class="nav-links">
+      <a href="index.html#offres">Offres</a>
+      <a href="index.html#travaux">Travaux</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a class="btn btn-cream btn-sm nav-cta" href="diagnostic.html">Diagnostic 79&nbsp;€</a>
+  </div>
+</nav>
+
+<header class="hero left">
+  <div class="wrap narrow">
+    <p><span class="pill">Réponse en moins de 24h</span></p>
+    <h1 class="mt" id="o-title">Parlons de votre projet.</h1>
+    <p class="sub" id="o-desc">Un message suffit. Décrivez votre entreprise en deux lignes, je regarde votre site le jour même.</p>
+    <div class="audit-box rv" style="text-align:left">
+      <form id="contact-form">
+        <label class="lbl" for="nom">Votre nom</label>
+        <input class="in" type="text" id="nom" name="nom" placeholder="Jean Dupont" required>
+        <label class="lbl" for="societe">Société</label>
+        <input class="in" type="text" id="societe" name="societe" placeholder="ACME Industrie SAS">
+        <label class="lbl" for="email">Votre email</label>
+        <input class="in" type="email" id="email" name="email" placeholder="jean@acme.fr" required>
+        <label class="lbl" for="offre">Offre concernée</label>
+        <select class="in" name="offre" id="offre">
+          <option value="diagnostic">Diagnostic express 79 €</option>
+          <option value="refonte">Refonte de marque 3 900 - 5 900 €</option>
+          <option value="rentree">Offre Rentrée 2 900 €</option>
+          <option value="pack">Pack Sérénité 69 €/mois</option>
+          <option value="partenaire">Partenariat agence</option>
+          <option value="30jours">Offre 30 jours 990 €</option>
+        </select>
+        <label class="lbl" for="message">Votre message</label>
+        <textarea class="in" id="message" name="message" placeholder="URL de votre site + ce qui vous fait douter de votre image." required></textarea>
+        <button type="submit" class="btn btn-cream mt" style="width:100%">Envoyer la demande</button>
+      </form>
+      <p class="mt" style="font-size:13px;color:var(--ink-dim)">Préférez l'email direct ? <a class="ghost" href="mailto:contact@mahdi-design.com">contact@mahdi-design.com <span class="arw">→</span></a></p>
+    </div>
+  </div>
 </header>
 
-<main class="page">
-  <div class="page-inner" style="max-width:620px;">
-    <a class="back" href="index.html">Retour à l'accueil</a>
-    <p class="label" style="color:var(--accent);">Contact</p>
-    <h1>Parlons de votre projet</h1>
-    <p>Laissez votre demande dans le formulaire, je vous réponds sous 24h en semaine. Le diagnostic est remboursable, le risque est pour moi.</p>
-
-    <p style="margin:26px 0 8px;color:var(--muted);font-size:0.9rem;">Ou écrivez-moi directement :</p>
-    <a class="contact-mail" href="mailto:contact@mahdi-design.com" style="margin-bottom:30px;display:inline-block;">contact@mahdi-design.com</a>
-
-    <form class="form" id="contact-form">
-      <input type="text" name="nom" placeholder="Votre nom" required>
-      <input type="text" name="societe" placeholder="Société">
-      <input type="email" name="email" placeholder="Votre email" required>
-      <select name="sujet" id="offre">
-        <option>Diagnostic express 79 €</option>
-        <option>Refonte de marque</option>
-        <option>Pack Sérénité</option>
-        <option>Autre demande</option>
-      </select>
-      <textarea name="message" placeholder="Votre message" required></textarea>
-      <button type="submit" class="btn btn-primary">Envoyer la demande</button>
-    </form>
-    <p style="margin-top:14px;font-size:0.82rem;color:var(--muted);">Si votre boîte mail ne s'ouvre pas au clic, écrivez simplement à contact@mahdi-design.com avec votre demande.</p>
+<footer class="site">
+  <div class="wrap foot">
+    <span>© <span data-year>2026</span> Mahdi, brand designer.</span>
+    <span class="sp"></span>
+    <a href="mailto:contact@mahdi-design.com">contact@mahdi-design.com</a>
+    <a href="https://mahdi-design.com">Portfolio : mahdi-design.com</a>
   </div>
-</main>
+<div class="footmark" aria-hidden="true">MAHDI<span class="ch">.</span></div></footer>
 
-<footer>
-  <p>© 2026 MAHDI. Designer de marque. <a href="mailto:contact@mahdi-design.com">contact@mahdi-design.com</a></p>
-</footer>
-
+<script src="assets/site.js?v=5"></script>
 <script>
-// pre-selection de l'offre si on arrive de la page d'une offre (ex: contact.html?offre=diagnostic)
-window.addEventListener('DOMContentLoaded', function () {
-  var o = new URLSearchParams(window.location.search).get('offre');
-  var map = { diagnostic: 'Diagnostic express 79 €', refonte: 'Refonte de marque', rentree: 'Refonte de marque', pack: 'Pack Sérénité', partenaire: 'Autre demande' };
-  if (o && map[o]) { document.getElementById('offre').value = map[o]; }
-});
-
-document.getElementById('contact-form').addEventListener('submit', function (e) {
+document.getElementById('contact-form').addEventListener('submit', function(e){
   e.preventDefault();
-  var f = e.target;
-  var sujet = 'Demande depuis le site : ' + f.sujet.value;
-  var corps = 'Nom : ' + f.nom.value + '\nSociete : ' + f.societe.value + '\nEmail : ' + f.email.value + '\n\n' + f.message.value;
-  window.location.href = 'mailto:contact@mahdi-design.com?subject=' + encodeURIComponent(sujet) + '&body=' + encodeURIComponent(corps);
+  var nom = document.getElementById('nom').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var msg = document.getElementById('message').value.trim();
+  if (!nom || !email || !msg){ alert('Nom, email et message : les trois sont requis.'); return; }
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ alert('Cet email ne ressemble pas a un email.'); return; }
+  var soc = document.getElementById('societe').value.trim();
+  var off = document.getElementById('offre');
+  var offTxt = off.options[off.selectedIndex].text;
+  var body = 'Nom : ' + nom + '\nSociete : ' + soc + '\nEmail : ' + email + '\nOffre : ' + offTxt + '\n\n' + msg;
+  window.location.href = 'mailto:contact@mahdi-design.com?subject=' + encodeURIComponent('Demande : ' + offTxt + ' / ' + nom) + '&body=' + encodeURIComponent(body);
 });
 </script>
-
 </body>
 </html>
